@@ -1,0 +1,16 @@
+export { ReactComponent as Logo } from "../asset/icon/logo.svg";
+export { ReactComponent as SneakpeakBanner } from "../asset/image/sneakpeakbannerimg.svg";
+export { ReactComponent as Web3enthusiaststhumbnail } from "../asset/image/web3enthusiaststhumbnail.svg";
+export { ReactComponent as Nftthumbnail } from "../asset/image/nftthumbnail.svg";
+export { ReactComponent as Kolthumbnail } from "../asset/image/kolthumbnail.svg";
+export { ReactComponent as Developersthumbnail } from "../asset/image/developersthumbnail.svg";
+export { ReactComponent as Investorsthumbnail } from "../asset/image/investorsthumbnail.svg";
+export { ReactComponent as Studentsthumbnail } from "../asset/image/studentsthumbnail.svg";
+export { ReactComponent as SpeakerImg } from "../asset/image/speakerimg.svg";
+export { ReactComponent as SecureYourSpotBgImg } from "../asset/image/secureyourspotbg.svg";
+export { ReactComponent as TelegramIcon } from "../asset/icon/telegram.svg";
+export { ReactComponent as GmailIcon } from "../asset/icon/gmail.svg";
+export { ReactComponent as XIcon } from "../asset/icon/x.svg";
+export { ReactComponent as LogoII } from "../asset/icon/logoII.svg";
+export { ReactComponent as Register } from "../asset/image/registerroller.svg";
+export { ReactComponent as SneakpeakBannerII } from "../asset/image/sneakpeakbannerimgII.svg";
