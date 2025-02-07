@@ -4,8 +4,15 @@ import { LogoII } from "../../asset";
 import { footerInfo } from "../../config/static";
 import { motion } from "motion/react";
 import { container, item } from "../../config/verticalSlideIn";
+import { HashLink } from "react-router-hash-link";
 
 export const Footer = () => {
+    const scrollWithOffset = (el: any) => {
+        const yCoordinate = el.getBoundingClientRect().top + window.scrollY;
+        const yOffset = -140.8; //to account for minimum nav height
+        window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+    };
+
     return (
         <FooterWrapper
             id="contact"
@@ -36,11 +43,34 @@ export const Footer = () => {
                     whileInView="show"
                 >
                     {footerInfo.about.map((link, index) => {
-                        return (
+                        return link.url === "/#about" ? (
+                            <HashLink
+                                key={index}
+                                to={link.url}
+                                smooth={true}
+                                scroll={(el) => scrollWithOffset(el)}
+                            >
+                                <Typography
+                                    variant="subtitle1"
+                                    fontFamily={"IBM Plex Sans"}
+                                    fontWeight={500}
+                                    fontSize={20}
+                                    lineHeight={"normal"}
+                                    color={"#FFFFFF"}
+                                    sx={{
+                                        cursor: "pointer",
+                                    }}
+                                >
+                                    {link.name}
+                                </Typography>
+                            </HashLink>
+                        ) : (
                             <motion.a
                                 variants={item}
                                 key={index}
                                 href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 <Typography
                                     variant="subtitle1"
@@ -56,7 +86,7 @@ export const Footer = () => {
                                     {link.name}
                                 </Typography>
                             </motion.a>
-                        )
+                        );
                     })}
                 </Stack>
                 <Stack
@@ -71,21 +101,27 @@ export const Footer = () => {
                             <motion.a
                                 variants={item}
                                 key={index}
-                                href={link.url}
                             >
-                                <Typography
-                                    variant="subtitle1"
-                                    fontFamily={"IBM Plex Sans"}
-                                    fontWeight={500}
-                                    fontSize={20}
-                                    lineHeight={"normal"}
-                                    color={"#FFFFFF"}
-                                    sx={{
-                                        cursor: "pointer",
-                                    }}
+                                <HashLink
+                                    key={index}
+                                    to={link.url}
+                                    smooth={true}
+                                    scroll={(el) => scrollWithOffset(el)}
                                 >
-                                    {link.name}
-                                </Typography>
+                                    <Typography
+                                        variant="subtitle1"
+                                        fontFamily={"IBM Plex Sans"}
+                                        fontWeight={500}
+                                        fontSize={20}
+                                        lineHeight={"normal"}
+                                        color={"#FFFFFF"}
+                                        sx={{
+                                            cursor: "pointer",
+                                        }}
+                                    >
+                                        {link.name}
+                                    </Typography>
+                                </HashLink>
                             </motion.a>
                         )
                     })}
@@ -139,15 +175,9 @@ export const Footer = () => {
             </Stack>
             <Box
                 className="footer-bottom-half"
-                component={motion.div}
-                variants={container}
-                initial="hidden"
-                whileInView="show"
             >
                 <Typography
                     variant="subtitle1"
-                    component={motion.p}
-                    variants={item}
                     fontFamily={"IBM Plex Sans"}
                     fontWeight={400}
                     fontSize={{ mobile: "16px" }}
@@ -159,7 +189,6 @@ export const Footer = () => {
                     alignItems={"center"}
                 >
                     <Typography
-                        component={"span"}
                         fontFamily={"inherit"}
                         fontWeight={"inherit"}
                         fontSize={"inherit"}
@@ -170,7 +199,6 @@ export const Footer = () => {
                         Copyright
                     </Typography>
                     <Typography
-                        component={"span"}
                         fontFamily={"inherit"}
                         fontWeight={"inherit"}
                         fontSize={"inherit"}
@@ -181,7 +209,6 @@ export const Footer = () => {
                         &copy;
                     </Typography>
                     <Typography
-                        component={"span"}
                         fontFamily={"inherit"}
                         fontWeight={"inherit"}
                         fontSize={"inherit"}
@@ -192,7 +219,6 @@ export const Footer = () => {
                         Acala Connect
                     </Typography>
                     <Typography
-                        component={"span"}
                         fontFamily={"inherit"}
                         fontWeight={"inherit"}
                         fontSize={"inherit"}
@@ -203,7 +229,6 @@ export const Footer = () => {
                         .
                     </Typography>
                     <Typography
-                        component={"span"}
                         fontFamily={"inherit"}
                         fontWeight={"inherit"}
                         fontSize={"inherit"}

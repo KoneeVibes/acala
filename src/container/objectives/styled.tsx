@@ -8,15 +8,16 @@ export const ObjectivesWrapper = styled(Box)<BoxProps & MotionProps>(({ theme })
     return {
         position: "relative",
         top: openMenu ? "calc(var(--mobile-nav-links-box-height) + var(--mobile-nav-CTA-button-box-height) + var(--flex-gap))" : "0",
-        "& .objectives-header": {
-            padding: "0 var(--basic-padding)",
+        padding: "0 var(--basic-padding)",
+        "& .grouped-objectives-stack": {
+            height: "100%"
         },
         "& .MuiCard-root": {
             borderRadius: "20px",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            height: "100%"
+            flex: 1,
         },
         "& .MuiCardContent-root": {
             padding: "var(--basic-padding)",
@@ -26,18 +27,6 @@ export const ObjectivesWrapper = styled(Box)<BoxProps & MotionProps>(({ theme })
             justifyContent: "space-between",
             "&:last-child": {
                 paddingBottom: "var(--basic-padding)",
-            }
-        },
-        "& .objectives-marquee-box": {
-            "& .rfm-marquee-container": {
-                gap: "var(--flex-gap)",
-            },
-            "& .rfm-child": {
-                maxWidth: "24.5rem"
-            },
-            "& .rfm-marquee, & .rfm-initial-child-container": {
-                gap: "var(--flex-gap)",
-                alignItems: "stretch"
             }
         },
         "& .objective-body-box": {
@@ -51,14 +40,10 @@ export const ObjectivesWrapper = styled(Box)<BoxProps & MotionProps>(({ theme })
             alignItems: "flex-end"
         },
         [theme.breakpoints.up("tablet")]: {
-            "& .objectives-header": {
-                padding: "0 var(--basic-padding)",
-            },
+            padding: "0 calc(var(--basic-padding) * 1.5)"
         },
         [theme.breakpoints.up("laptop")]: {
-            "& .objectives-header": {
-                padding: "0 var(--basic-padding)",
-            },
+            padding: "0 calc(var(--basic-padding) * 2)"
         }
     }
 })

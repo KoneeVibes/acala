@@ -13,26 +13,29 @@ export const SecureYourSpotWrapper = styled(Stack)<BoxProps & MotionProps>(({ th
         backgroundColor: "#FFFFFF",
         overflow: "hidden",
         "& .secure-your-spot-img-box": {
+            display: "none",
             position: "relative",
             right: "calc(var(--basic-padding) * -1)",
-            bottom: "calc(var(--basic-padding) * -1)",
-            "& svg": {
-                float: "right"
-            },
         },
         [theme.breakpoints.up("tablet")]: {
-            padding: "calc(var(--basic-padding) * 2) calc(var(--basic-padding) * 1.5)",
+            flexDirection: "row",
+            padding: "0 calc(var(--basic-padding) * 1.5)",
+            "& .secure-your-spot-text-area": {
+                padding: "calc(var(--basic-padding) * 2) 0",
+            },
             "& .secure-your-spot-img-box": {
+                display: "block",
                 right: "calc(var(--basic-padding) * -1.5)",
-                bottom: "calc(var(--basic-padding) * -2)",
             }
         },
         [theme.breakpoints.up("laptop")]: {
             gap: "var(--flex-gap)",
-            padding: "calc(var(--basic-padding) * 3) calc(var(--basic-padding) * 2)",
+            padding: "0 calc(var(--basic-padding) * 2)",
+            "& .secure-your-spot-text-area": {
+                padding: "calc(var(--basic-padding) * 3) 0",
+            },
             "& .secure-your-spot-img-box": {
                 right: "calc(var(--basic-padding) * -2)",
-                bottom: "calc(var(--basic-padding) * -3)",
             }
         }
     }

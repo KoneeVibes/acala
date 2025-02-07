@@ -1,8 +1,6 @@
 import { Box, Grid2, Stack, Typography } from "@mui/material";
 import { CountdownWrapper } from "./styled";
 import Countdown, { zeroPad } from 'react-countdown';
-import { motion } from "motion/react";
-import { container, item } from "../../config/verticalSlideIn";
 
 export const CountdownToEventDay = () => {
     const renderer = ({ days, hours, minutes, seconds, completed }: { days: number, hours: number, minutes: number, seconds: number, completed: boolean }) => {
@@ -18,9 +16,7 @@ export const CountdownToEventDay = () => {
                     justifyContent={"space-between"}
                 >
                     <Grid2
-                        size={{ mobile: 6, tablet: 3 }}
-                        component={motion.div}
-                        variants={item}
+                        size={{ mobile: 6, tablet: 3}}
                     >
                         <Stack
                             className="period days-to-event"
@@ -55,8 +51,6 @@ export const CountdownToEventDay = () => {
                     </Grid2>
                     <Grid2
                         size={{ mobile: 6, tablet: 3 }}
-                        component={motion.div}
-                        variants={item}
                     >
                         <Stack
                             className="period hours-to-event"
@@ -91,8 +85,6 @@ export const CountdownToEventDay = () => {
                     </Grid2>
                     <Grid2
                         size={{ mobile: 6, tablet: 3 }}
-                        component={motion.div}
-                        variants={item}
                     >
                         <Stack
                             className="period minutes-to-event"
@@ -127,8 +119,6 @@ export const CountdownToEventDay = () => {
                     </Grid2>
                     <Grid2
                         size={{ mobile: 6, tablet: 3 }}
-                        component={motion.div}
-                        variants={item}
                     >
                         <Stack
                             component={"div"}
@@ -167,12 +157,7 @@ export const CountdownToEventDay = () => {
         }
     }
     return (
-        <CountdownWrapper
-            component={motion.div}
-            variants={container}
-            initial="hidden"
-            whileInView="show"
-        >
+        <CountdownWrapper>
             <Countdown
                 date={new Date('2025-03-08T00:00:00')}
                 renderer={renderer}

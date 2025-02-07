@@ -1,9 +1,10 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { OrganizersWrapper } from "./styled";
-import unwana from "../../asset/image/unwanaimg.svg";
+// import unwana from "../../asset/image/unwanaimg.svg";
 import { motion } from "motion/react";
 import { container } from "../../config/verticalSlideIn";
 import { leftChild, leftParent, rightParent } from "../../config/horizontalSlideIn";
+import { Unwana } from "../../asset";
 
 export const Organizers = () => {
     return (
@@ -93,7 +94,7 @@ export const Organizers = () => {
                     </Box>
                 </Box>
             </Stack>
-            <Box
+            {/* <Box
                 component={motion.div}
                 variants={rightParent}
                 initial={"hidden"}
@@ -102,7 +103,16 @@ export const Organizers = () => {
                 style={{
                     backgroundImage: `url(${unwana})`
                 }}
-            />
+            /> */}
+            <Box
+                component={motion.div}
+                variants={rightParent}
+                initial={"hidden"}
+                whileInView={"show"}
+                className="organizers-img-box"
+            >
+                <Unwana />
+            </Box>
         </OrganizersWrapper>
     )
 }

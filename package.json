@@ -19,6 +19,7 @@
     "react-countdown": "^2.3.6",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^7.1.4",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",

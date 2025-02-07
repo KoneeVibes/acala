@@ -5,11 +5,12 @@ import { collaborators } from "../../config/static";
 import { BaseButton } from "../../component/button/styled";
 import { motion } from "motion/react";
 import { container, item } from "../../config/verticalSlideIn";
+import Marquee from "react-fast-marquee";
 
 export const Collaborators = () => {
     const handleNavigateToLuma = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        e.preventDefault();
-        return window.open("https://t.me/acalaafricancommunity", "_blank")
+        // e.preventDefault();
+        // return window.open("https://t.me/acalaafricancommunity", "_blank");
     }
     return (
         <CollaboratorsWrapper
@@ -20,6 +21,7 @@ export const Collaborators = () => {
                 variants={container}
                 initial="hidden"
                 whileInView="show"
+                className="collaborators-title-section"
             >
                 <Typography
                     variant="h2"
@@ -41,6 +43,7 @@ export const Collaborators = () => {
                 variants={container}
                 initial="hidden"
                 whileInView="show"
+                className="collaborators-subtitle-section"
             >
                 <Typography
                     variant="body1"
@@ -57,44 +60,57 @@ export const Collaborators = () => {
                     Acala Connect 2025 is supported by forward-thinking collaborators and partners committed to driving innovation and expanding the reach of decentralized finance. Their contributions make this event possible and impactful.
                 </Typography>
             </Box>
-            <Grid2
-                container
-                component={motion.div}
-                variants={container}
-                initial="hidden"
-                whileInView="show"
-                spacing={"var(--flex-gap)"}
-                justifyContent={"space-between"}
-                marginBlock={{ mobile: "calc(var(--basic-margin)/2)" }}
-            >
-                {collaborators.map((collaborator, index) => {
-                    return (
-                        <Grid2
-                            key={index}
-                            size={{ mobile: 6, tablet: 4, laptop: 2 }}
-                            component={motion.div}
-                            variants={item}
-                        >
-                            <Box
-                                component={"div"}
-                                className="collaborator"
-                            >
-                                <QuestionMarkIcon />
-                            </Box>
-                        </Grid2>
-                    )
-                })}
-            </Grid2>
+            <Box>
+                <Marquee
+                    autoFill={true}
+                    pauseOnHover={true}
+                    pauseOnClick={true}
+                >
+                    <Grid2
+                        container
+                        spacing={"var(--flex-gap)"}
+                        justifyContent={"space-between"}
+                        marginBlock={{ mobile: "calc(var(--basic-margin)/2)" }}
+                    >
+                        {collaborators.map((collaborator, index) => {
+                            return (
+                                <Grid2
+                                    key={index}
+                                    size={{ mobile: 2 }}
+                                >
+                                    <Box
+                                        component={"div"}
+                                        className="collaborator"
+                                    >
+                                        <QuestionMarkIcon />
+                                    </Box>
+                                </Grid2>
+                            )
+                        })}
+                    </Grid2>
+                </Marquee>
+            </Box>
             <Box
                 component={motion.div}
                 variants={container}
                 initial="hidden"
                 whileInView="show"
+                className="collaborators-button-box"
             >
                 <BaseButton
                     variant="contained"
                     background="#645AFF"
-                    sx={{ float: "right", width: { mobile: "100%", miniTablet: "auto" } }}
+                    sx={{
+                        float: "right",
+                        width: { mobile: "100%", miniTablet: "auto" },
+                        background: "#645AFF",
+                        transition: "background 0.3s ease-in-out",
+                        "&:hover": {
+                            background: "linear-gradient(90deg, #E40C5B, #645AFF)",
+                            backgroundSize: "200% 100%",
+                            animation: "colorTransition 3s infinite",
+                        }
+                    }}
                     component={motion.button}
                     variants={item}
                     onClick={handleNavigateToLuma}

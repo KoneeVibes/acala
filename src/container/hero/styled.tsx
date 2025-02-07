@@ -12,6 +12,7 @@ export const HeroWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top center",
         padding: "var(--basic-padding)",
+        borderTop: "2px solid #000000",
         display: "flex",
         alignItems: "center",
         height: "24.625rem",
@@ -35,12 +36,12 @@ export const HeroWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) => {
             "& .hero-register-box": {
                 display: "block",
                 "& svg": {
-                    animation: "rotate360 5s linear infinite",
+                    // animation: "rotate360 5s linear infinite",
                 }
             },
         },
         [theme.breakpoints.up("laptop")]: {
-            height: "40.625rem",
+            height: "33.625rem",
             padding: "var(--basic-padding) calc(var(--basic-padding) * 2)",
         }
     }

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Card, CardContent, Grid2, Stack, Typography } from "@mui/material";
 import { SneakpeakWrapper } from "./styled";
-import { SneakpeakBanner, SneakpeakBannerII } from "../../asset";
+import { SneakpeakBanner } from "../../asset";
 import { BaseButton } from "../../component/button/styled";
 import PinDropIcon from '@mui/icons-material/PinDrop';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -13,7 +13,6 @@ import { leftParent, rightChild, rightParent } from "../../config/horizontalSlid
 
 export const Sneakpeak = () => {
     const [renderMap, setRenderMap] = useState(false);
-    const [renderThumbnail, setRenderThumbnail] = useState(false);
 
     const handleLocationButtonHoverIn = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
@@ -23,16 +22,6 @@ export const Sneakpeak = () => {
     const handleLocationButtonHoverOut = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
         return setRenderMap(false);
-    };
-
-    const handleCalendarButtonHoverIn = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        e.preventDefault();
-        return setRenderThumbnail(true);
-    };
-
-    const handleCalendarButtonHoverOut = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        e.preventDefault();
-        return setRenderThumbnail(false);
     };
 
     return (
@@ -94,8 +83,10 @@ export const Sneakpeak = () => {
                             <BaseButton
                                 variant="contained"
                                 background="#E40C5B"
-                                startIcon={<PinDropIcon />}
+                                startIcon={!renderMap && <PinDropIcon />}
                                 sx={{ width: "100%" }}
+                                fontweight={600}
+                                fontsize={16}
                                 onMouseOver={handleLocationButtonHoverIn}
                                 onMouseOut={handleLocationButtonHoverOut}
                             >
@@ -113,7 +104,7 @@ export const Sneakpeak = () => {
                                         textAlign={"left"}
                                         whiteSpace={"normal"}
                                     >
-                                        Emjmm hotels, 47 Dominic Utuk avenue
+                                        Emjmm hotels, 47 Dominic Utuk Avenue, Uyo, Akwa Ibom.
                                     </Typography>
                                 )}
                             </BaseButton>
@@ -127,26 +118,22 @@ export const Sneakpeak = () => {
                                 background="#E40C5B"
                                 startIcon={<CalendarMonthIcon />}
                                 sx={{ width: "100%" }}
-                                onMouseOver={handleCalendarButtonHoverIn}
-                                onMouseOut={handleCalendarButtonHoverOut}
+                                fontweight={600}
+                                fontsize={16}
                             >
-                                {renderThumbnail ? (
-                                    <SneakpeakBannerII className="thumbnail" />
-                                ) : (
-                                    <Typography
-                                        variant={"button"}
-                                        fontFamily={"inherit"}
-                                        fontWeight={"inherit"}
-                                        fontSize={"inherit"}
-                                        lineHeight={"inherit"}
-                                        color={"inherit"}
-                                        textTransform={"inherit"}
-                                        textAlign={"left"}
-                                        whiteSpace={"normal"}
-                                    >
-                                        07 - 08 March, 2025
-                                    </Typography>
-                                )}
+                                <Typography
+                                    variant={"button"}
+                                    fontFamily={"inherit"}
+                                    fontWeight={"inherit"}
+                                    fontSize={"inherit"}
+                                    lineHeight={"inherit"}
+                                    color={"inherit"}
+                                    textTransform={"inherit"}
+                                    textAlign={"left"}
+                                    whiteSpace={"normal"}
+                                >
+                                    Sat. 08 March, 2025
+                                </Typography>
                             </BaseButton>
                         </Box>
                     </Stack>

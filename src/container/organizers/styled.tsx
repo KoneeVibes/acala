@@ -11,24 +11,53 @@ export const OrganizersWrapper = styled(Stack)<BoxProps & MotionProps>(({ theme 
         padding: "var(--basic-padding)",
         backgroundColor: "rgba(255, 76, 59, 0.11)",
         gap: "var(--flex-gap)",
+        alignItems: "center",
         "& .organizers-text-box": {
-            flex: 0.6,
+            flex: 0.7,
             overflow: "hidden",
-        },
-        "& .organizers-img-box": {
-            flex: 0.4,
-            overflow: "hidden",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "top center",
-            borderRadius: "10px",
             [theme.breakpoints.down("tablet")]: {
-                minHeight: "25.25rem"
-            }
+                width: "100%"
+            },
+        },
+        // "& .organizers-img-box": {
+        //     flex: 0.4,
+        //     overflow: "hidden",
+        //     backgroundSize: "cover",
+        //     backgroundRepeat: "no-repeat",
+        //     backgroundPosition: "top center",
+        //     borderRadius: "10px",
+        //     [theme.breakpoints.down("tablet")]: {
+        //         minHeight: "25.25rem"
+        //     }
+        // },
+        "& .organizers-img-box": {
+            flex: 0.3,
+            overflow: "hidden",
+            borderRadius: "10px",
+            "& svg": {
+                borderRadius: "inherit",
+            },
+            [theme.breakpoints.down("miniTablet")]: {
+                "& svg": {
+                    width: "100%",
+                    height: "auto"
+                }
+            },
+            [theme.breakpoints.between("tablet", "laptop")]: {
+                "& svg": {
+                    width: "100%",
+                    height: "auto",
+                }
+            },
+            [theme.breakpoints.up("laptop")]: {
+                "& svg": {
+                    float: "right"
+                }
+            },
         },
         [theme.breakpoints.up("tablet")]: {
-            gap: "calc(var(--flex-gap) * 2)",
             flexDirection: "row",
+            gap: "calc(var(--flex-gap) * 2)",
             padding: "calc(var(--basic-padding) * 1.5)",
         },
         [theme.breakpoints.up("laptop")]: {

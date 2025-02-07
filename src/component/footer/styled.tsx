@@ -30,6 +30,7 @@ export const FooterWrapper = styled(Stack)<BoxProps & MotionProps>(({ theme }) =
             textDecoration: "none",
         },
         [theme.breakpoints.up("tablet")]: {
+            marginTop: "-8px",
             "& .footer-top-half": {
                 padding: "calc(var(--basic-padding) * 1) calc(var(--basic-padding) * 1.5)",
             },

@@ -26,7 +26,13 @@
     }
   }
 
-  * {
-    /* outline: 1px red solid; */
+  @keyframes colorTransition {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    100% {
+      background-position: 100% 50%;
+    }
   }
 }

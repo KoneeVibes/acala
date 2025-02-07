@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import { HeroWrapper } from "./styled";
 import { Register } from "../../asset";
@@ -5,6 +6,15 @@ import { motion } from "motion/react";
 import { container, item } from "../../config/verticalSlideIn";
 
 export const Hero = () => {
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+
+    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+        const { clientX, clientY } = event;
+        const offsetX = (clientX / window.innerWidth - 0.5) * 20;
+        const offsetY = (clientY / window.innerHeight - 0.5) * 20;
+        setPosition({ x: offsetX, y: offsetY });
+    };
+
     return (
         <HeroWrapper>
             <Box
@@ -20,7 +30,7 @@ export const Hero = () => {
                     variants={item}
                     fontFamily={"Outfit"}
                     fontWeight={700}
-                    fontSize={"10vw"}
+                    fontSize={"8vw"}
                     lineHeight={"normal"}
                     color={"#FFFFFF"}
                     whiteSpace={"normal"}
@@ -33,7 +43,7 @@ export const Hero = () => {
                     variants={item}
                     fontFamily={"IBM Plex Sans"}
                     fontWeight={400}
-                    fontSize={{ mobile: 14, tablet: 25, desktop: 33 }}
+                    fontSize={{ mobile: 14, tablet: 25, desktop: 30 }}
                     lineHeight={"normal"}
                     color={"#FFFFFF"}
                     whiteSpace={"normal"}
@@ -44,6 +54,11 @@ export const Hero = () => {
             <Box
                 component={"div"}
                 className="hero-register-box"
+                onMouseMove={handleMouseMove}
+                sx={{
+                    transform: `translate(${position.x}px, ${position.y}px)`,
+                    transition: "transform 0.1s ease-out",
+                }}
             >
                 <Register />
             </Box>

@@ -39,7 +39,7 @@ export const About = () => {
                 whiteSpace={"normal"}
                 sx={{ textWrapStyle: "balance" }}
             >
-                Acala Connect 2025 is a 2-days event in Nigeria designed to showcase the innovations of the Acala Network in the African crypto market. This event will educate, inspire, and connect developers, NFT creators, students, investors, and blockchain enthusiasts. It’s the first-ever Acala in-person event in Africa, aiming to create awareness and introduce Acala’s products and innovations to the continent.
+                Acala Connect 2025 is an event in Nigeria aimed to showcase the productive innovations of the Acala Network in the African crypto market. This event will educate, inspire, and connect developers, NFT creators, students, investors, and blockchain enthusiasts. It’s the first-ever Acala in-real life (IRL) event in Africa, aiming to create awareness and introduce Acala’s products and innovations to the continent.
             </Typography>
         </AboutWrapper>
     )

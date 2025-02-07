@@ -14,3 +14,4 @@ export { ReactComponent as XIcon } from "../asset/icon/x.svg";
 export { ReactComponent as LogoII } from "../asset/icon/logoII.svg";
 export { ReactComponent as Register } from "../asset/image/registerroller.svg";
 export { ReactComponent as SneakpeakBannerII } from "../asset/image/sneakpeakbannerimgII.svg";
+export { ReactComponent as Unwana } from "../asset/image/unwanaimg.svg";

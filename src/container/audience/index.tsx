@@ -35,15 +35,16 @@ export const Audience = () => {
                 variants={container}
                 initial="hidden"
                 whileInView="show"
-                rowSpacing={"var(--flex-gap)"}
-                columnSpacing={"calc(var(--flex-gap)/8)"}
+                rowSpacing={"calc(var(--flex-gap)/2)"}
+                columnSpacing={"calc(var(--flex-gap)/4)"}
                 justifyContent={"space-between"}
             >
                 {audience.map((category, index) => {
                     return (
                         <Grid2
                             key={index}
-                            size={{ mobile: 12, miniTablet: 6, tablet: 4 }}
+                            size={{ mobile: 12, tablet: 6, desktop: 4 }}
+                            minHeight={"8.2rem"}
                             component={motion.div}
                             variants={item}
                         >
@@ -63,7 +64,7 @@ export const Audience = () => {
                                             variant="body1"
                                             fontFamily={"IBM Plex Sans"}
                                             fontWeight={600}
-                                            fontSize={{ mobile: "22px", laptop: "29px" }}
+                                            fontSize={{ mobile: "22px", laptop: "25px" }}
                                             lineHeight={"normal"}
                                             color={"#000000"}
                                             whiteSpace={"normal"}

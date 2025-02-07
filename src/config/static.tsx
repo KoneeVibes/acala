@@ -142,29 +142,29 @@ export const footerInfo = {
     about: [
         {
             name: "About Acala Network",
-            url: "/"
+            url: "https://acala.network/"
         },
         {
             name: "About Acala Connect",
-            url: "/"
+            url: "/#about"
         },
         {
             name: "Acala’s Product",
-            url: "/"
+            url: "https://apps.acala.network/"
         }
     ],
     others: [
         {
             name: "AC2025 Partners",
-            url: "/"
+            url: "/#partners"
         },
         {
             name: "AC2025 Speakers",
-            url: "/"
+            url: "/#speakers"
         },
         {
             name: "Collaborate With Us",
-            url: "/"
+            url: "/#partners"
         }
     ],
     contact: [
