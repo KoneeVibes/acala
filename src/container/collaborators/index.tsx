@@ -9,8 +9,8 @@ import Marquee from "react-fast-marquee";
 
 export const Collaborators = () => {
     const handleNavigateToLuma = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-        // e.preventDefault();
-        // return window.open("https://t.me/acalaafricancommunity", "_blank");
+        e.preventDefault();
+        return window.open("https://t.me/acalaafricancommunity", "_blank");
     }
     return (
         <CollaboratorsWrapper

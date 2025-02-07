@@ -10,9 +10,18 @@ export const Hero = () => {
 
     const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
         const { clientX, clientY } = event;
-        const offsetX = (clientX / window.innerWidth - 0.5) * 20;
-        const offsetY = (clientY / window.innerHeight - 0.5) * 20;
+        const offsetX = (clientX / window.innerWidth - 0.5) * 50;
+        const offsetY = (clientY / window.innerHeight - 0.5) * 50;
         setPosition({ x: offsetX, y: offsetY });
+    };
+
+    const handleMouseLeave = () => {
+        setPosition({ x: 0, y: 0 });
+    };
+
+    const handleNavigateToLuma = (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
+        e.preventDefault();
+        return window.open("https://t.me/acalaafricancommunity", "_blank");
     };
 
     return (
@@ -55,12 +64,15 @@ export const Hero = () => {
                 component={"div"}
                 className="hero-register-box"
                 onMouseMove={handleMouseMove}
+                onMouseLeave={handleMouseLeave}
                 sx={{
                     transform: `translate(${position.x}px, ${position.y}px)`,
                     transition: "transform 0.1s ease-out",
                 }}
             >
-                <Register />
+                <Register
+                    onClick={handleNavigateToLuma}
+                />
             </Box>
         </HeroWrapper>
     )
