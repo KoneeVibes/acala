@@ -21,7 +21,7 @@ export const Hero = () => {
 
     const handleNavigateToLuma = (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => {
         e.preventDefault();
-        return window.open("https://t.me/acalaafricancommunity", "_blank");
+        return window.open("https://lu.ma/u7bcq812", "_blank");
     };
 
     return (
