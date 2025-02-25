@@ -3,7 +3,7 @@ import objectivesimg2 from "../asset/image/objectivesimg2.svg";
 import objectivesimg3 from "../asset/image/objectiveimg3.svg";
 import objectivesimg4 from "../asset/image/objectiveimg4.svg";
 import objectivesimg5 from "../asset/image/objectiveimg5.svg";
-import { Developersthumbnail, GmailIcon, Investorsthumbnail, Kolthumbnail, Nftthumbnail, SpeakerImg, Studentsthumbnail, TelegramIcon, Web3enthusiaststhumbnail, XIcon } from "../asset";
+import { Developersthumbnail, GmailIcon, Investorsthumbnail, Kolthumbnail, Nftthumbnail, SpeakerImgI, SpeakerImgII, SpeakerImgIII, SpeakerImgIV, SpeakerImgV, SpeakerImgVI, Studentsthumbnail, TelegramIcon, Web3enthusiaststhumbnail, XIcon } from "../asset";
 
 export const navLinks = [
     {
@@ -119,27 +119,27 @@ export const collaborators = ["", "", "", "", "", ""];
 export const speakers = [
     {
         name: "",
-        thumbnail: <SpeakerImg />
+        thumbnail: <SpeakerImgI />
     },
     {
         name: "",
-        thumbnail: <SpeakerImg />
+        thumbnail: <SpeakerImgII />
     },
     {
         name: "",
-        thumbnail: <SpeakerImg />
+        thumbnail: <SpeakerImgIII />
     },
     {
         name: "",
-        thumbnail: <SpeakerImg />
+        thumbnail: <SpeakerImgIV />
     },
     {
         name: "",
-        thumbnail: <SpeakerImg />
+        thumbnail: <SpeakerImgV />
     },
     {
         name: "",
-        thumbnail: <SpeakerImg />
+        thumbnail: <SpeakerImgVI />
     },
 ];
 

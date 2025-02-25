@@ -6,7 +6,12 @@ export { ReactComponent as Kolthumbnail } from "../asset/image/kolthumbnail.svg"
 export { ReactComponent as Developersthumbnail } from "../asset/image/developersthumbnail.svg";
 export { ReactComponent as Investorsthumbnail } from "../asset/image/investorsthumbnail.svg";
 export { ReactComponent as Studentsthumbnail } from "../asset/image/studentsthumbnail.svg";
-export { ReactComponent as SpeakerImg } from "../asset/image/speakerimg.svg";
+export { ReactComponent as SpeakerImgI } from "../asset/image/speakerimgI.svg";
+export { ReactComponent as SpeakerImgII } from "../asset/image/speakerimgII.svg";
+export { ReactComponent as SpeakerImgIII } from "../asset/image/speakerimgIII.svg";
+export { ReactComponent as SpeakerImgIV } from "../asset/image/speakerimgIV.svg";
+export { ReactComponent as SpeakerImgV } from "../asset/image/speakerimgV.svg";
+export { ReactComponent as SpeakerImgVI } from "../asset/image/speakerimgVI.svg";
 export { ReactComponent as SecureYourSpotBgImg } from "../asset/image/secureyourspotbg.svg";
 export { ReactComponent as TelegramIcon } from "../asset/icon/telegram.svg";
 export { ReactComponent as GmailIcon } from "../asset/icon/gmail.svg";
