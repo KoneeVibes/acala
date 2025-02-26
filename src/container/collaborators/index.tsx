@@ -1,6 +1,5 @@
 import { Box, Grid2, Typography } from "@mui/material";
 import { CollaboratorsWrapper } from "./styled";
-import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 import { collaborators } from "../../config/static";
 import { BaseButton } from "../../component/button/styled";
 import { motion } from "motion/react";
@@ -80,9 +79,8 @@ export const Collaborators = () => {
                                 >
                                     <Box
                                         component={"div"}
-                                        className="collaborator"
                                     >
-                                        <QuestionMarkIcon />
+                                        {collaborator}
                                     </Box>
                                 </Grid2>
                             )

@@ -3,7 +3,7 @@ import objectivesimg2 from "../asset/image/objectivesimg2.svg";
 import objectivesimg3 from "../asset/image/objectiveimg3.svg";
 import objectivesimg4 from "../asset/image/objectiveimg4.svg";
 import objectivesimg5 from "../asset/image/objectiveimg5.svg";
-import { Developersthumbnail, GmailIcon, Investorsthumbnail, Kolthumbnail, Nftthumbnail, SpeakerImgI, SpeakerImgII, SpeakerImgIII, SpeakerImgIV, SpeakerImgV, SpeakerImgVI, Studentsthumbnail, TelegramIcon, Web3enthusiaststhumbnail, XIcon } from "../asset";
+import { CollaboratorI, CollaboratorII, CollaboratorIII, CollaboratorIV, CollaboratorIX, CollaboratorV, CollaboratorVI, CollaboratorVII, CollaboratorVIII, CollaboratorX, CollaboratorXI, CollaboratorXII, Developersthumbnail, GmailIcon, Investorsthumbnail, Kolthumbnail, Nftthumbnail, SpeakerImgI, SpeakerImgII, SpeakerImgIII, SpeakerImgIV, SpeakerImgV, SpeakerImgVI, Studentsthumbnail, TelegramIcon, Web3enthusiaststhumbnail, XIcon } from "../asset";
 
 export const navLinks = [
     {
@@ -114,7 +114,20 @@ export const audience = [
 ];
 
 
-export const collaborators = ["", "", "", "", "", ""];
+export const collaborators = [
+    <CollaboratorI />,
+    <CollaboratorII />,
+    <CollaboratorIII />,
+    <CollaboratorIV />,
+    <CollaboratorV />,
+    <CollaboratorVI />,
+    <CollaboratorVII />,
+    <CollaboratorVIII />,
+    <CollaboratorIX />,
+    <CollaboratorX />,
+    <CollaboratorXI />,
+    <CollaboratorXII />
+];
 
 export const speakers = [
     {

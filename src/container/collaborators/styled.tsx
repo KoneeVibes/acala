@@ -14,42 +14,6 @@ export const CollaboratorsWrapper = styled(Stack)<BoxProps & MotionProps>(({ the
         "& .collaborators-title-section, & .collaborators-subtitle-section, & .collaborators-button-box": {
             padding: "0 var(--basic-padding)",
         },
-        "& .collaborator": {
-            background: "#EDEDED",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "var(--basic-padding)",
-            borderRadius: "50%",
-            width: "3.8125rem",
-            height: "3.8125rem",
-            overflow: "hidden",
-            flexShrink: 0,
-            [theme.breakpoints.up("miniTablet")]: {
-                width: "5.8125rem",
-                height: "5.8125rem",
-            },
-            [theme.breakpoints.up("tablet")]: {
-                width: "9.8125rem",
-                height: "9.8125rem",
-            },
-            [theme.breakpoints.up("laptop")]: {
-                width: "3.8125rem",
-                height: "3.8125rem",
-            },
-            [theme.breakpoints.up("desktop")]: {
-                width: "6.8125rem",
-                height: "6.8125rem",
-            },
-            [theme.breakpoints.up("xl")]: {
-                width: "7.8125rem",
-                height: "7.8125rem",
-            },
-            [theme.breakpoints.up(1640)]: {
-                width: "9.8125rem",
-                height: "9.8125rem",
-            }
-        },
         "& .MuiGrid2-root": {
             display: "flex",
             justifyContent: "center",
@@ -75,3 +39,4 @@ export const CollaboratorsWrapper = styled(Stack)<BoxProps & MotionProps>(({ the
         }
     }
 })
+
