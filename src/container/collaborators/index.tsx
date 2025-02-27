@@ -68,6 +68,7 @@ export const Collaborators = () => {
                     <Grid2
                         container
                         spacing={"var(--flex-gap)"}
+                        alignItems={"center"}
                         justifyContent={"space-between"}
                         marginBlock={{ mobile: "calc(var(--basic-margin)/2)" }}
                     >
@@ -75,7 +76,7 @@ export const Collaborators = () => {
                             return (
                                 <Grid2
                                     key={index}
-                                    size={{ mobile: 2 }}
+                                    size={{ mobile: 1 }}
                                 >
                                     <Box
                                         component={"div"}
