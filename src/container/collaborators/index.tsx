@@ -76,7 +76,7 @@ export const Collaborators = () => {
                             return (
                                 <Grid2
                                     key={index}
-                                    size={{ mobile: 1 }}
+                                    size={{ mobile: 0.75 }}
                                 >
                                     <Box
                                         component={"div"}

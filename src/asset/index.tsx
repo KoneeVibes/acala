@@ -32,3 +32,7 @@ export { ReactComponent as CollaboratorIX } from "../asset/image/collaboratorIX.
 export { ReactComponent as CollaboratorX } from "../asset/image/collaboratorX.svg";
 export { ReactComponent as CollaboratorXI } from "../asset/image/collaboratorXI.svg";
 export { ReactComponent as CollaboratorXII } from "../asset/image/collaboratorXII.svg";
+export { ReactComponent as CollaboratorXIII } from "../asset/image/collaboratorXIII.svg";
+export { ReactComponent as CollaboratorXIV } from "../asset/image/collaboratorXIV.svg";
+export { ReactComponent as CollaboratorXV } from "../asset/image/collaboratorXV.svg";
+export { ReactComponent as CollaboratorXVI } from "../asset/image/collaboratorXVI.svg";
