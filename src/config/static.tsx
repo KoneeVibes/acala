@@ -3,7 +3,7 @@ import objectivesimg2 from "../asset/image/objectivesimg2.svg";
 import objectivesimg3 from "../asset/image/objectiveimg3.svg";
 import objectivesimg4 from "../asset/image/objectiveimg4.svg";
 import objectivesimg5 from "../asset/image/objectiveimg5.svg";
-import { CollaboratorI, CollaboratorII, CollaboratorIII, CollaboratorIV, CollaboratorIX, CollaboratorV, CollaboratorVI, CollaboratorVII, CollaboratorVIII, CollaboratorX, CollaboratorXI, CollaboratorXII, CollaboratorXIII, CollaboratorXIV, CollaboratorXV, CollaboratorXVI, Developersthumbnail, GmailIcon, Investorsthumbnail, Kolthumbnail, Nftthumbnail, SpeakerImgI, SpeakerImgII, SpeakerImgIII, SpeakerImgIV, SpeakerImgV, SpeakerImgVI, Studentsthumbnail, TelegramIcon, Web3enthusiaststhumbnail, XIcon } from "../asset";
+import { CollaboratorI, CollaboratorII, CollaboratorIII, CollaboratorIV, CollaboratorIX, CollaboratorV, CollaboratorVI, CollaboratorVII, CollaboratorVIII, CollaboratorX, CollaboratorXI, CollaboratorXII, CollaboratorXIII, CollaboratorXIV, CollaboratorXV, CollaboratorXVI, CollaboratorXVII, CollaboratorXVIII, Developersthumbnail, GmailIcon, Investorsthumbnail, Kolthumbnail, Nftthumbnail, SpeakerImgI, SpeakerImgII, SpeakerImgIII, SpeakerImgIV, SpeakerImgMobileI, SpeakerImgMobileII, SpeakerImgMobileIII, SpeakerImgMobileIV, SpeakerImgMobileV, SpeakerImgMobileVI, SpeakerImgV, SpeakerImgVI, Studentsthumbnail, TelegramIcon, Web3enthusiaststhumbnail, XIcon } from "../asset";
 
 export const navLinks = [
     {
@@ -53,7 +53,7 @@ export const objectives = [
     {
         title: "Build Community and Partnerships",
         bg: objectivesimg4,
-        body: "Promote networking and collaboration for a striving community.",
+        body: "We foster connections between individuals and organizations, creating a vibrant ecosystem of shared knowledge and resources.",
         color: "#E40C5B",
         hue: "rgba(228, 12, 91, 0.12)"
     },
@@ -63,6 +63,13 @@ export const objectives = [
         body: "Establish Acala Network as a leading DeFi hub in Africa, enhancing brand recognition and strengthening its community and ecosystem growth.",
         color: "#645AFF",
         hue: "rgba(100, 90, 255, 0.12)"
+    },
+    {
+        title: "Promote Adoption of Acala Products",
+        bg: objectivesimg1,
+        body: "Drive awareness and usage of Acala’s ecosystem by onboarding new users and showcasing key products like Acala EVM and decentralized applications.",
+        color: "#E40C5B",
+        hue: "rgba(228, 12, 91, 0.12)"
     },
 ];
 
@@ -126,6 +133,8 @@ export const collaborators = [
     <CollaboratorXIV />,
     <CollaboratorXV />,
     <CollaboratorXVI />,
+    <CollaboratorXVII />,
+    <CollaboratorXVIII />,
 ];
 
 export const speakers = [
@@ -152,6 +161,33 @@ export const speakers = [
     {
         name: "",
         thumbnail: <SpeakerImgVI />
+    },
+];
+
+export const speakersII = [
+    {
+        name: "",
+        thumbnail: <SpeakerImgMobileI />
+    },
+    {
+        name: "",
+        thumbnail: <SpeakerImgMobileII />
+    },
+    {
+        name: "",
+        thumbnail: <SpeakerImgMobileIII />
+    },
+    {
+        name: "",
+        thumbnail: <SpeakerImgMobileIV />
+    },
+    {
+        name: "",
+        thumbnail: <SpeakerImgMobileV />
+    },
+    {
+        name: "",
+        thumbnail: <SpeakerImgMobileVI />
     },
 ];
 

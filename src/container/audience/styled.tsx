@@ -8,7 +8,7 @@ export const AudienceWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) =
     return {
         position: "relative",
         top: openMenu ? "calc(var(--mobile-nav-links-box-height) + var(--mobile-nav-CTA-button-box-height) + var(--flex-gap))" : "0",
-        padding: "var(--basic-padding)",
+        padding: "calc(var(--basic-padding) * 3) var(--basic-padding)",
         backgroundColor: "#F8E0DD",
         "& .MuiCard-root": {
             borderRadius: "10px",
@@ -47,10 +47,10 @@ export const AudienceWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) =
             overflow: "hidden",
         },
         [theme.breakpoints.up("tablet")]: {
-            padding: "calc(var(--basic-padding) * 2) calc(var(--basic-padding) * 1.5)"
+            padding: "calc(var(--basic-padding) * 3) calc(var(--basic-padding) * 1.5)"
         },
         [theme.breakpoints.up("laptop")]: {
-            padding: "calc(var(--basic-padding) * 3) calc(var(--basic-padding) * 2)",
+            padding: "calc(var(--basic-padding) * 4) calc(var(--basic-padding) * 2)",
         }
     }
 })

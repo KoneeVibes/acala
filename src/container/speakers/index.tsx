@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Box, Grid2, Stack, Typography, useMediaQuery } from "@mui/material";
 import { SpeakersWrapper } from "./styled";
-import { speakers } from "../../config/static";
+import { speakers, speakersII } from "../../config/static";
 import { motion } from "motion/react";
 import { container, item } from "../../config/verticalSlideIn";
 
@@ -47,7 +47,7 @@ export const Speakers = () => {
                         variant="body1"
                         fontFamily={"IBM Plex Sans"}
                         fontWeight={400}
-                        fontSize={{ mobile: "16px", desktop: "24px" }}
+                        fontSize={{ mobile: "12px", tablet: "16px", desktop: "24px" }}
                         lineHeight={"normal"}
                         color={"#000000"}
                         whiteSpace={"normal"}
@@ -68,7 +68,7 @@ export const Speakers = () => {
                     justifyContent={"space-between"}
                     marginBlockStart={{ mobile: "calc(var(--basic-margin)/2)" }}
                 >
-                    {speakers.map((speaker, index) => {
+                    {speakersII.map((speaker, index) => {
                         return (
                             <Grid2
                                 key={index}

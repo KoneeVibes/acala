@@ -19,7 +19,7 @@ export const Organizers = () => {
                 variants={leftParent}
                 initial={"hidden"}
                 whileInView={"show"}
-                gap={{ mobile: "calc(var(--flex-gap)/2)", tablet: "calc(var(--flex-gap) * 1.5)" }}
+                gap={{ mobile: "calc(var(--flex-gap) * 2)", tablet: "calc(var(--flex-gap) * 1.5)" }}
                 className="organizers-text-box"
             >
                 <Box
@@ -46,7 +46,7 @@ export const Organizers = () => {
                             variant="body1"
                             fontFamily={"IBM Plex Sans"}
                             fontWeight={400}
-                            fontSize={{ mobile: "16px", desktop: "24px" }}
+                            fontSize={{ mobile: "12px", tablet: "16px", desktop: "24px" }}
                             lineHeight={"normal"}
                             color={"#000000"}
                             textAlign={"center"}
@@ -83,7 +83,7 @@ export const Organizers = () => {
                             variant="body1"
                             fontFamily={"IBM Plex Sans"}
                             fontWeight={400}
-                            fontSize={{ mobile: "16px", desktop: "24px" }}
+                            fontSize={{ mobile: "12px", tablet: "16px", desktop: "24px" }}
                             lineHeight={"normal"}
                             color={"#000000"}
                             textAlign={"center"}

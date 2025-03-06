@@ -46,7 +46,7 @@ export const Sneakpeak = () => {
                         color={"#000000"}
                         textAlign={"center"}
                         whiteSpace={"normal"}
-                        marginBlockEnd={{ mobile: "calc(var(--basic-margin)/2)", tablet: "calc(var(--basic-margin)*1.5)" }}
+                        marginBlockEnd={{ mobile: "calc(var(--basic-margin))", tablet: "calc(var(--basic-margin)*1.5)" }}
                     >
                         Sneak Peak of ACALA CONNECT 2025
                     </Typography>
@@ -68,9 +68,10 @@ export const Sneakpeak = () => {
                         <SneakpeakBanner />
                     </Box>
                     <Stack
-                        gap={"var(--flex-gap)"}
+                        gap={{ mobile: "var(--flex-gap)", laptop: "calc(var(--flex-gap) * 2)" }}
                         className={"sneak-peak-controllers"}
-                        justifyContent={{ tablet: "space-around" }}
+                        alignItems={{ mobile: "center", laptop: "stretch" }}
+                        justifyContent={{ tablet: "center" }}
                         component={motion.div}
                         variants={rightParent}
                         initial={"hidden"}
@@ -84,7 +85,7 @@ export const Sneakpeak = () => {
                                 variant="contained"
                                 background="#E40C5B"
                                 startIcon={!renderMap && <PinDropIcon />}
-                                sx={{ width: "100%" }}
+                                sx={{ width: "100%", padding: "calc(var(--basic-padding) * 1) var(--basic-padding)" }}
                                 fontweight={600}
                                 fontsize={16}
                                 onMouseOver={handleLocationButtonHoverIn}
@@ -117,7 +118,7 @@ export const Sneakpeak = () => {
                                 variant="contained"
                                 background="#E40C5B"
                                 startIcon={<CalendarMonthIcon />}
-                                sx={{ width: "100%" }}
+                                sx={{ width: { laptop: "100%" }, padding: "calc(var(--basic-padding) * 1) var(--basic-padding)" }}
                                 fontweight={600}
                                 fontsize={16}
                             >
@@ -153,7 +154,7 @@ export const Sneakpeak = () => {
                     return (
                         <Grid2
                             key={index}
-                            size={{ mobile: 12, miniTablet: 6, tablet: 3 }}
+                            size={{ mobile: 6, tablet: 3 }}
                             component={motion.div}
                             variants={item}
                         >

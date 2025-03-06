@@ -24,7 +24,7 @@ export const Audience = () => {
                     color={"#000000"}
                     textAlign={"center"}
                     whiteSpace={"normal"}
-                    marginBlockEnd={{ mobile: "calc(var(--basic-margin)/2)", tablet: "var(--basic-margin)" }}
+                    marginBlockEnd={{ mobile: "calc(var(--basic-margin))", tablet: "var(--basic-margin)" }}
                 >
                     Our Audience
                 </Typography>
@@ -59,12 +59,13 @@ export const Audience = () => {
                                     <Box
                                         component={"div"}
                                         className={"audience-text-box"}
+                                        sx={{ display: "flex", alignItems: "center" }}
                                     >
                                         <Typography
                                             variant="body1"
                                             fontFamily={"IBM Plex Sans"}
                                             fontWeight={600}
-                                            fontSize={{ mobile: "22px", laptop: "25px" }}
+                                            fontSize={{ mobile: "20px", laptop: "22px" }}
                                             lineHeight={"normal"}
                                             color={"#000000"}
                                             whiteSpace={"normal"}

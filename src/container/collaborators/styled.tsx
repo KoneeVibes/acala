@@ -8,9 +8,9 @@ export const CollaboratorsWrapper = styled(Stack)<BoxProps & MotionProps>(({ the
     return {
         position: "relative",
         top: openMenu ? "calc(var(--mobile-nav-links-box-height) + var(--mobile-nav-CTA-button-box-height) + var(--flex-gap))" : "0",
-        gap: "calc(var(--flex-gap)/2)",
+        gap: "calc(var(--flex-gap) * 2)",
         backgroundColor: "#FFFFFF",
-        padding: "var(--basic-padding) 0",
+        padding: "calc(var(--basic-padding) * 3)  0",
         "& .collaborators-title-section, & .collaborators-subtitle-section, & .collaborators-button-box": {
             padding: "0 var(--basic-padding)",
         },
@@ -25,14 +25,13 @@ export const CollaboratorsWrapper = styled(Stack)<BoxProps & MotionProps>(({ the
             gap: "var(--flex-gap)",
         },
         [theme.breakpoints.up("tablet")]: {
-            padding: "calc(var(--basic-margin) * 2) 0",
+            padding: "calc(var(--basic-margin) * 4) 0",
             "& .collaborators-title-section, & .collaborators-subtitle-section": {
                 padding: "0 calc(var(--basic-padding) * 1.5)"
             },
         },
         [theme.breakpoints.up("laptop")]: {
-            gap: "var(--flex-gap)",
-            padding: "calc(var(--basic-padding) * 3) 0",
+            padding: "calc(var(--basic-padding) * 5) 0",
             "& .collaborators-title-section, & .collaborators-subtitle-section": {
                 padding: "0 calc(var(--basic-padding) * 2)",
             },

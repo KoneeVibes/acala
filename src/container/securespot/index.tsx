@@ -13,7 +13,9 @@ export const SecureYourSpot = () => {
     return (
         <SecureYourSpotWrapper>
             <Stack
-                gap={"var(--flex-gap)"}
+                gap={{ mobile: "calc(var(--flex-gap)/4)", tablet: "var(--flex-gap)" }}
+                justifyContent={"center"}
+                alignItems={{ mobile: "center", tablet: "flex-start" }}
                 className="secure-your-spot-text-area"
             >
                 <Box
@@ -28,11 +30,10 @@ export const SecureYourSpot = () => {
                         variants={item}
                         fontFamily={"IBM Plex Sans"}
                         fontWeight={500}
-                        fontSize={{ mobile: "22px", tablet: "32px", laptop: "40px" }}
+                        fontSize={{ mobile: "20px", tablet: "32px", laptop: "40px" }}
                         lineHeight={"normal"}
                         color={"#000000"}
                         whiteSpace={"normal"}
-                        width={"70%"}
                     >
                         Secure Your Spot Now
                     </Typography>
@@ -49,10 +50,11 @@ export const SecureYourSpot = () => {
                         variants={item}
                         fontFamily={"IBM Plex Sans"}
                         fontWeight={400}
-                        fontSize={{ mobile: "16px", desktop: "24px" }}
+                        fontSize={{ mobile: "9px", tablet: "16px", desktop: "24px" }}
                         lineHeight={"normal"}
                         color={"#000000"}
                         whiteSpace={"normal"}
+                        textAlign={{ mobile: "center", tablet: "left" }}
                     >
                         Be part of Acala Connect 2025 and help shape the future of decentralized finance and blockchain innovation. Reserve your spot today!
                     </Typography>
@@ -67,6 +69,7 @@ export const SecureYourSpot = () => {
                     variants={container}
                     initial="hidden"
                     whileInView="show"
+                    marginBlockStart={"calc(var(--basic-margin)/2)"}
                 >
                     <BaseButton
                         variant="contained"
@@ -77,7 +80,8 @@ export const SecureYourSpot = () => {
                         sx={{
                             color: "#000000",
                             width: { mobile: "100%", miniTablet: "auto" },
-                            "&:hover": { background: "#E40C5B", color: "#FFFFFF" }
+                            "&:hover": { background: "#E40C5B", color: "#FFFFFF" },
+                            fontSize: { mobile: "13px", tablet: "16px", desktop: "23px" }
                         }}
                         onClick={handleNavigateToLuma}
                     >

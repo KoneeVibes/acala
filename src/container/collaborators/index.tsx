@@ -50,7 +50,7 @@ export const Collaborators = () => {
                     variants={item}
                     fontFamily={"IBM Plex Sans"}
                     fontWeight={400}
-                    fontSize={{ mobile: "16px", desktop: "24px" }}
+                    fontSize={{ mobile: "12px", tablet: "16px", desktop: "24px" }}
                     lineHeight={"normal"}
                     color={"#000000"}
                     whiteSpace={"normal"}
@@ -76,7 +76,7 @@ export const Collaborators = () => {
                             return (
                                 <Grid2
                                     key={index}
-                                    size={{ mobile: 0.75 }}
+                                    size={{ mobile: (12 / 18) }}
                                 >
                                     <Box
                                         component={"div"}

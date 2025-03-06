@@ -81,6 +81,7 @@ export const Footer = () => {
                                     color={"#FFFFFF"}
                                     sx={{
                                         cursor: "pointer",
+                                        textAlign: { mobile: "center", tablet: "left" }
                                     }}
                                 >
                                     {link.name}
@@ -180,7 +181,7 @@ export const Footer = () => {
                     variant="subtitle1"
                     fontFamily={"IBM Plex Sans"}
                     fontWeight={400}
-                    fontSize={{ mobile: "16px" }}
+                    fontSize={{ mobile: "7px", miniTablet: "16px" }}
                     lineHeight={"normal"}
                     color={"#FFFFFF"}
                     whiteSpace={"normal"}

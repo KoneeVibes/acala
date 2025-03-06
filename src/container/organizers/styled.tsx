@@ -8,7 +8,7 @@ export const OrganizersWrapper = styled(Stack)<BoxProps & MotionProps>(({ theme 
     return {
         position: "relative",
         top: openMenu ? "calc(var(--mobile-nav-links-box-height) + var(--mobile-nav-CTA-button-box-height) + var(--flex-gap))" : "0",
-        padding: "var(--basic-padding)",
+        padding: "calc(var(--basic-padding) * 2.5) var(--basic-padding)",
         backgroundColor: "rgba(255, 76, 59, 0.11)",
         gap: "var(--flex-gap)",
         alignItems: "center",
@@ -58,10 +58,10 @@ export const OrganizersWrapper = styled(Stack)<BoxProps & MotionProps>(({ theme 
         [theme.breakpoints.up("tablet")]: {
             flexDirection: "row",
             gap: "calc(var(--flex-gap) * 2)",
-            padding: "calc(var(--basic-padding) * 1.5)",
+            padding: "calc(var(--basic-padding) * 3) calc(var(--basic-padding) * 1.5)",
         },
         [theme.breakpoints.up("laptop")]: {
-            padding: "calc(var(--basic-padding) * 3) calc(var(--basic-padding) * 2)",
+            padding: "calc(var(--basic-padding) * 5) calc(var(--basic-padding) * 2)",
         }
     }
 })

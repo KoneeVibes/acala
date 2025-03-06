@@ -10,8 +10,10 @@ export const FooterWrapper = styled(Stack)<BoxProps & MotionProps>(({ theme }) =
         top: openMenu ? "calc(var(--mobile-nav-links-box-height) + var(--mobile-nav-CTA-button-box-height) + var(--flex-gap))" : "0",
         backgroundColor: "#E40C5B",
         "& .footer-top-half": {
-            padding: "var(--basic-padding)",
+            alignItems: "center",
+            padding: "calc(var(--basic-padding) * 2) var(--basic-padding)",
             "& .footer-logo-box": {
+                justifyContent: "center",
                 "& svg": {
                     maxHeight: "50px",
                 },
@@ -24,7 +26,8 @@ export const FooterWrapper = styled(Stack)<BoxProps & MotionProps>(({ theme }) =
             }
         },
         "& .footer-bottom-half": {
-            padding: "var(--basic-padding)",
+            padding: "calc(var(--basic-padding)/1.5) var(--basic-padding)",
+            justifyItems: "center",
         },
         "& a": {
             textDecoration: "none",
@@ -32,18 +35,22 @@ export const FooterWrapper = styled(Stack)<BoxProps & MotionProps>(({ theme }) =
         [theme.breakpoints.up("tablet")]: {
             marginTop: "-8px",
             "& .footer-top-half": {
-                padding: "calc(var(--basic-padding) * 1) calc(var(--basic-padding) * 1.5)",
+                alignItems: "flex-start",
+                padding: "calc(var(--basic-padding) * 3) calc(var(--basic-padding) * 1.5)",
+                "& .footer-logo-box": {
+                    justifyContent: "flex-start",
+                }
             },
             "& .footer-bottom-half": {
-                padding: "calc(var(--basic-padding) * 1) calc(var(--basic-padding) * 1.5)",
+                padding: "calc(var(--basic-padding)) calc(var(--basic-padding) * 1.5)",
             },
         },
         [theme.breakpoints.up("laptop")]: {
             "& .footer-top-half": {
-                padding: "calc(var(--basic-padding) * 2) var(--basic-padding)",
+                padding: "calc(var(--basic-padding) * 5) var(--basic-padding)",
             },
             "& .footer-bottom-half": {
-                padding: "calc(var(--basic-padding) * 2) var(--basic-padding)",
+                padding: "calc(var(--basic-padding)) var(--basic-padding)",
             },
         }
     }

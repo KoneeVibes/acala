@@ -16,7 +16,7 @@ export const CountdownToEventDay = () => {
                     justifyContent={"space-between"}
                 >
                     <Grid2
-                        size={{ mobile: 6, tablet: 3}}
+                        size={{ mobile: 6, tablet: 3 }}
                     >
                         <Stack
                             className="period days-to-event"
@@ -26,7 +26,7 @@ export const CountdownToEventDay = () => {
                                     variant="h3"
                                     fontFamily={"IBM Plex Sans"}
                                     fontWeight={500}
-                                    fontSize={{ mobile: 30, tablet: 45, desktop: 64 }}
+                                    fontSize={{ mobile: 40, tablet: 45, desktop: 64 }}
                                     lineHeight={"normal"}
                                     color={"#000000"}
                                     textAlign={"center"}
@@ -60,7 +60,7 @@ export const CountdownToEventDay = () => {
                                     variant="h3"
                                     fontFamily={"IBM Plex Sans"}
                                     fontWeight={500}
-                                    fontSize={{ mobile: 30, tablet: 45, desktop: 64 }}
+                                    fontSize={{ mobile: 40, tablet: 45, desktop: 64 }}
                                     lineHeight={"normal"}
                                     color={"#000000"}
                                     textAlign={"center"}
@@ -94,7 +94,7 @@ export const CountdownToEventDay = () => {
                                     variant="h3"
                                     fontFamily={"IBM Plex Sans"}
                                     fontWeight={500}
-                                    fontSize={{ mobile: 30, tablet: 45, desktop: 64 }}
+                                    fontSize={{ mobile: 40, tablet: 45, desktop: 64 }}
                                     lineHeight={"normal"}
                                     color={"#000000"}
                                     textAlign={"center"}
@@ -129,7 +129,7 @@ export const CountdownToEventDay = () => {
                                     variant="h3"
                                     fontFamily={"IBM Plex Sans"}
                                     fontWeight={500}
-                                    fontSize={{ mobile: 30, tablet: 45, desktop: 64 }}
+                                    fontSize={{ mobile: 40, tablet: 45, desktop: 64 }}
                                     lineHeight={"normal"}
                                     color={"#000000"}
                                     textAlign={"center"}

@@ -10,7 +10,7 @@ export const SpeakersWrapper = styled(Stack)<BoxProps & MotionProps>(({ theme })
         position: "relative",
         backgroundColor: "#645AFF1F",
         top: openMenu ? "calc(var(--mobile-nav-links-box-height) + var(--mobile-nav-CTA-button-box-height) + var(--flex-gap))" : "0",
-        padding: "var(--basic-padding)",
+        padding: "calc(var(--basic-padding) * 3) var(--basic-padding)",
         "& .speaker": {
             width: "100%",
             "& svg": {
@@ -24,15 +24,16 @@ export const SpeakersWrapper = styled(Stack)<BoxProps & MotionProps>(({ theme })
             }
         },
         [theme.breakpoints.up("tablet")]: {
-            padding: "var(--basic-padding) calc(var(--basic-padding) * 1.5)",
+            gap: "calc(var(--flex-gap) * 2)",
+            padding: "calc(var(--basic-padding) * 3) calc(var(--basic-padding) * 1.5)",
             "& .speakers-top-half": {
                 padding: "0 var(--basic-padding)",
             },
         },
         [theme.breakpoints.up("laptop")]: {
-            padding: "calc(var(--basic-padding) * 3) calc(var(--basic-padding) * 2)",
+            padding: "calc(var(--basic-padding) * 5) calc(var(--basic-padding) * 2)",
             "& .speakers-top-half": {
-                padding: "0 calc(var(--basic-padding) * 4)",
+                padding: "0 calc(var(--basic-padding) * 3)",
             },
         }
     }

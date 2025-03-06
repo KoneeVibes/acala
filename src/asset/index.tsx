@@ -12,6 +12,12 @@ export { ReactComponent as SpeakerImgIII } from "../asset/image/speakerimgIII.sv
 export { ReactComponent as SpeakerImgIV } from "../asset/image/speakerimgIV.svg";
 export { ReactComponent as SpeakerImgV } from "../asset/image/speakerimgV.svg";
 export { ReactComponent as SpeakerImgVI } from "../asset/image/speakerimgVI.svg";
+export { ReactComponent as SpeakerImgMobileI } from "../asset/image/speakerimgMobileI.svg";
+export { ReactComponent as SpeakerImgMobileII } from "../asset/image/speakerimgMobileII.svg";
+export { ReactComponent as SpeakerImgMobileIII } from "../asset/image/speakerimgMobileIII.svg";
+export { ReactComponent as SpeakerImgMobileIV } from "../asset/image/speakerimgMobileIV.svg";
+export { ReactComponent as SpeakerImgMobileV } from "../asset/image/speakerimgMobileV.svg";
+export { ReactComponent as SpeakerImgMobileVI } from "../asset/image/speakerimgMobileVI.svg";
 export { ReactComponent as SecureYourSpotBgImg } from "../asset/image/secureyourspotbg.svg";
 export { ReactComponent as TelegramIcon } from "../asset/icon/telegram.svg";
 export { ReactComponent as GmailIcon } from "../asset/icon/gmail.svg";
@@ -36,3 +42,5 @@ export { ReactComponent as CollaboratorXIII } from "../asset/image/collaboratorX
 export { ReactComponent as CollaboratorXIV } from "../asset/image/collaboratorXIV.svg";
 export { ReactComponent as CollaboratorXV } from "../asset/image/collaboratorXV.svg";
 export { ReactComponent as CollaboratorXVI } from "../asset/image/collaboratorXVI.svg";
+export { ReactComponent as CollaboratorXVII } from "../asset/image/collaboratorXVII.svg";
+export { ReactComponent as CollaboratorXVIII } from "../asset/image/collaboratorXVIII.svg";

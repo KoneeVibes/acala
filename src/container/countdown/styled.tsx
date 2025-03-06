@@ -8,10 +8,9 @@ export const CountdownWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) 
     return {
         position: "relative",
         top: openMenu ? "calc(var(--mobile-nav-links-box-height) + var(--mobile-nav-CTA-button-box-height) + var(--flex-gap))" : "0",
-        padding: "var(--basic-padding)",
-        margin: "var(--basic-margin)",
+        padding: "calc(var(--basic-padding) * 1.5)",
+        marginTop: "calc(var(--basic-margin) * 2)",
         backgroundColor: "#E40C5B",
-        borderRadius: "10px",
         "& .period": {
             backgroundColor: "#FCE2EB",
             padding: "var(--basic-padding)",
@@ -19,12 +18,8 @@ export const CountdownWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) 
             overflow: "hidden",
             justifyContent: "space-between",
             flexShrink: 0,
-            width: "2.3125rem",
-            height: "3.3125rem",
-            [theme.breakpoints.up("miniTablet")]: {
-                width: "4.25rem",
-                height: "4.25rem",
-            },
+            width: "5rem",
+            height: "5rem",
             [theme.breakpoints.up("tablet")]: {
                 width: "5.25rem",
                 height: "5.25rem",
@@ -48,7 +43,9 @@ export const CountdownWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) 
             }
         },
         [theme.breakpoints.up("tablet")]: {
-            margin: "calc(var(--basic-margin) * 2) calc(var(--basic-margin) * 1.5)",
+            borderRadius: "10px",
+            margin: "calc(var(--basic-margin) * 3) calc(var(--basic-margin) * 1.5) calc(var(--basic-margin) * 4)",
+            padding: "calc(var(--basic-padding) * 1.5) var(--basic-padding)",
             "& .hours-to-event": {
                 float: "none"
             },
@@ -57,7 +54,7 @@ export const CountdownWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) 
             },
         },
         [theme.breakpoints.up("laptop")]: {
-            margin: "calc(var(--basic-margin) * 3) calc(var(--basic-margin) * 2)",
+            margin: "calc(var(--basic-margin) * 4) calc(var(--basic-margin) * 2) calc(var(--basic-margin) * 5)",
         }
     }
 })
