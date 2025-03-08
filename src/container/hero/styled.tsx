@@ -25,24 +25,20 @@ export const HeroWrapper = styled(Box)<BoxProps & MotionProps>(({ theme }) => {
             }
         },
         "& .hero-register-box": {
-            display: "none",
             position: "absolute",
             bottom: "var(--basic-padding)",
-            right: 0
+            right: "var(--basic-padding)",
         },
         [theme.breakpoints.up("tablet")]: {
             height: "34.625rem",
             padding: "var(--basic-padding) calc(var(--basic-padding) * 1.5)",
-            "& .hero-register-box": {
-                display: "block",
-                "& svg": {
-                    // animation: "rotate360 5s linear infinite",
-                }
-            },
         },
         [theme.breakpoints.up("laptop")]: {
             height: "33.625rem",
             padding: "var(--basic-padding) calc(var(--basic-padding) * 2)",
+            "& .hero-register-box": {
+                right: 0
+            },
         }
     }
 })

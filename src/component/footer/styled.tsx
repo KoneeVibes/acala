@@ -17,11 +17,11 @@ export const FooterWrapper = styled(Stack)<BoxProps & MotionProps>(({ theme }) =
                 "& svg": {
                     maxHeight: "50px",
                 },
-                [theme.breakpoints.down(280)]: {
+                [theme.breakpoints.down(1024)]: {
                     "& svg": {
-                        width: "100%",
-                        height: "auto",
-                    }
+                        maxHeight: "50px",
+                        maxWidth: "50px",
+                    },
                 }
             }
         },

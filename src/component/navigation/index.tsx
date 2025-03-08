@@ -1,3 +1,5 @@
+import { useContext, useEffect } from "react";
+import { Context } from "../../context";
 import { HashLink } from "react-router-hash-link";
 import { useNavigate } from "react-router-dom";
 import { Box, Stack, Typography } from "@mui/material";
@@ -9,6 +11,8 @@ import { MenuButton } from "../button/menu";
 
 export const Navigation = () => {
     const navigate = useNavigate();
+    const { openMenu } = useContext(Context);
+
     const handleLogoClick = () => {
         navigate("/");
     };
@@ -24,9 +28,27 @@ export const Navigation = () => {
         window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
     }
 
+    useEffect(() => {
+        const navbar = document.getElementById("nav");
+
+        const handleScroll = () => {
+            if (window.scrollY > 140.8) {
+                navbar?.classList.add("sticky-nav");
+            } else {
+                navbar?.classList.remove("sticky-nav");
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        // Call handleScroll immediately when openMenu changes
+        handleScroll();
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [openMenu]);
+
     return (
         <NavigationWrapper
             id="nav"
+            style={{ boxShadow: openMenu ? "none" : "0px 4px 10px rgba(0, 0, 0, 0.1)" }}
         >
             <Box
                 component={"div"}
@@ -69,6 +91,7 @@ export const Navigation = () => {
             <Box
                 component={"div"}
                 className="register-button"
+                sx={{ boxShadow: !openMenu ? "none" : "0px 4px 10px rgba(0, 0, 0, 0.1)" }}
             >
                 <BaseButton
                     variant="contained"

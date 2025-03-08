@@ -12,8 +12,17 @@
     --basic-margin: 2rem;
     --flex-gap: 2rem;
     --mobile-nav-logo-box-height: 8.8rem;
-    --mobile-nav-links-box-height: 17rem;
+    --mobile-nav-links-box-height: 16.25rem;
     --mobile-nav-CTA-button-box-height: 5.8rem;
+  }
+
+  .sticky-nav {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
   }
 
   @keyframes rotate360 {

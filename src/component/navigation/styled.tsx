@@ -22,6 +22,7 @@ export const NavigationWrapper = styled(Stack)<StackProps & MotionProps>(({ them
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
+        background: "#FFFFFF",
         "& a": {
             textDecoration: "none",
         },
@@ -33,15 +34,17 @@ export const NavigationWrapper = styled(Stack)<StackProps & MotionProps>(({ them
             left: 0,
             right: 0,
             padding: "0 var(--basic-padding)",
+            backgroundColor: "inherit",
         },
         "& .register-button": {
             display: openMenu ? "flex" : "none",
             position: "absolute",
-            top: "calc(var(--flex-gap) + var(--mobile-nav-logo-box-height) + var(--mobile-nav-links-box-height))",
+            top: "calc(var(--mobile-nav-logo-box-height) + var(--mobile-nav-links-box-height))",
             left: 0,
             right: 0,
-            padding: "0 var(--basic-padding) var(--basic-padding)",
+            padding: "var(--basic-padding)",
             overflow: "hidden",
+            backgroundColor: "inherit",
         },
         "& .favicon-box": {
             "& svg": {

@@ -1,12 +1,13 @@
 import { useState } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import { HeroWrapper } from "./styled";
-import { Register } from "../../asset";
+import { RegisterI, RegisterII } from "../../asset";
 import { motion } from "motion/react";
 import { container, item } from "../../config/verticalSlideIn";
 
 export const Hero = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
+    const matchesLaptop = useMediaQuery('(max-width:1024px)');
 
     const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
         const { clientX, clientY } = event;
@@ -70,9 +71,14 @@ export const Hero = () => {
                     transition: "transform 0.1s ease-out",
                 }}
             >
-                <Register
-                    onClick={handleNavigateToLuma}
-                />
+                {matchesLaptop ?
+                    <RegisterII
+                        onClick={handleNavigateToLuma}
+                    /> :
+                    <RegisterI
+                        onClick={handleNavigateToLuma}
+                    />
+                }
             </Box>
         </HeroWrapper>
     )
